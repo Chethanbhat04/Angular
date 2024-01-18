@@ -1,0 +1,17 @@
+<div>
+    <form>
+        <div>
+            <label for="FName">First Name: </label>
+            <input type="text" #FName>
+        </div>
+        <div>
+            <label for="LName">Last Name: </label>
+            <input type="text" #LName>
+        </div>
+        <button type="button" (click)="onSaveName(FName.value, LName.value)">Show Name</button>
+    </form>
+
+    <div>
+        <p>Full Name: {{name}}</p>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+
+    <h2><strong><u>Shopping Plan</u></strong></h2>
+
+    <form>
+        <div>
+            <label for="AddItem">Add Item: </label>
+            <input type="text" #addValue><br><br>
+            <button type="button" (click)="addItem(addValue.value)">Add</button><br><br>
+        </div>
+        <div>
+            <label for="RemoveItem">Remove Item: </label>
+            <input type="text" #removeValue><br><br>
+            <button type="button" (click)="removeItem(removeValue.value)">Remove</button><br><br>
+        </div>
+    </form>
+
+    <div>
+        <h3><u><b>List of Items:</b></u></h3>
+        <ul>
+            <li *ngFor="let str of items">
+                {{ str }}
+            </li>
+        </ul>
+    </div>
+</div>
